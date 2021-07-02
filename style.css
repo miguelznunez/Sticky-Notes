@@ -26,21 +26,24 @@ button:hover{
 }
 
 .container{
-  width: 95%;
+  width: 1280px;
   margin: auto;
   position: relative;
 }
 
 .nav{
   color: white;
-  padding: 15px 0;
+  padding: 0 20px;
+  min-height: 70px;
   text-shadow: 1px 1px black;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 .createBox{
+  display: none;
   position: absolute;
   left: 50%;
   top: 0;
@@ -69,17 +72,33 @@ button:hover{
 }
 
 .note{
-  width:250px;
-  height:250px;
-  padding:25px;
+  width:300px;
+  height:300px;
   transition: 2s;
-  cursor: pointer;
   overflow-wrap: break-word;
   box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.75);
 }
 
 .note h1{
   font-size: 1.5rem;
+}
+
+.details {
+  margin-top: 25px;
+  padding: 0 15px;
+  font-size: 1.5rem;
+}
+
+.details i{
+  color: whitesmoke;
+  cursor: pointer;
+  text-shadow: 1px 1px #BBB;
+}
+
+@media(max-width:1280px){
+  .container{
+    width: 95%;
+  }
 }
 
 @media(max-width:768px){
