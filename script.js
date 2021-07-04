@@ -23,16 +23,26 @@ const color = () => {
 }
 
 createBox.addEventListener('keydown', (event) => {
-  if(event.key === 'Enter')
-    addNote();
+  if(event.key === 'Enter'){
+    contentArray.push(input.value);
+    localStorage.setItem('items', JSON.stringify(contentArray));
+    divMaker(input.value);
+    input.value = '';
+  }
 });
 
 document.getElementById("createNote").addEventListener("click", () => {
-  createNote();
+  createBox.style.display = "block";
+});
+
+document.getElementById("hide").addEventListener("click", () =>{
+  createBox.style.display = "none";
 });
 
 document.getElementById("deleteNotes").addEventListener("click", () => {
-  deleteNotes();
+  localStorage.clear();
+  notes.innerHTML = '';
+  contentArray = [];
 });
 
 contentArray.forEach(divMaker);
@@ -57,23 +67,3 @@ function divMaker(text){
     div.style.transform = rotate();
   })
 }
-
-addNote = () => {
-  contentArray.push(input.value);
-  localStorage.setItem('items', JSON.stringify(contentArray));
-  divMaker(input.value);
-  input.value = '';
-}
-
-createNote = () => {
-  if(createBox.style.display === "none")
-    createBox.style.display = "block";
-  else
-    createBox.style.display = "none";
-};
-
-deleteNotes = () => {
-  localStorage.clear();
-  notes.innerHTML = '';
-  contentArray = [];
-};
