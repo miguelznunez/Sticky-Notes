@@ -121,8 +121,8 @@ button:hover{
 }
 
 @media(max-width:480px){
-  .createBox{
-    width: 100%;
+  .innerCreateBox{
+    width: 95%;
+    margin: auto;
   }
-
 }
