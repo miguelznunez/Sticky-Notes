@@ -68,11 +68,16 @@ button:hover{
 }
 
 .innerCreateBox i{
-  font-size: 1.2rem;
-  color: white;
+  font-size: 1.4rem;
+  color: gray;
   cursor: pointer;
-  margin-top: -305px;
-  margin-left: 2px;
+  margin-top: -285px;
+  margin-left: -35px;
+  transition: 1s ease-in-out;
+}
+
+.innerCreateBox i:hover{
+  color: lightgray;
 }
 
 .notes{
