@@ -10,30 +10,23 @@
 </head>
 <body>
 
-  <div class="createBox">
-    <div class="innerCreateBox">
-      <textarea placeholder="Note..." id="user-input" maxlength="160" style="font-size: 1.5rem;"></textarea>
+  <div id="modal">
+    <div id="inner_modal">
+      <textarea placeholder="Note..." id="user_input" maxlength="160"></textarea>
       <i class="far fa-times-circle" id="hide"></i>
     </div>
   </div>
-    
-  <header>
-    <div class="container">
-      <div class="nav">
-        <div>
-          <h1><i style="color: #c2ff3d;" class="fas fa-sticky-note"></i> Sticky Notes</h1>
-        </div>
-        <div>
-          <button id="createNote">Create Note</button>
-          <button id="deleteNotes">Delete Notes</button>
-        </div>
-      </div>
-    </div>
-  </header>
+  
+  <main id="main">
 
-  <div class="container">
-    <div class="notes"></div>
-  </div>
+    <header id="header">
+      <h1><i class="fas fa-sticky-note"></i> Sticky Notes</h1>
+      <button id="add_note">Add Note</button>
+    </header>
+    
+    <section id="all_notes"></section>
+
+  </main>
   
   <script src="script.js"></script>
 </body>
