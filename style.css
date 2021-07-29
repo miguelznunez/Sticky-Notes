@@ -125,6 +125,8 @@ button:hover{
 
 @media(max-width:768px){
   #header{
+    padding: 20px;
+    gap: 10px;
     flex-direction: column;
     align-items: center;
     text-align: center;
