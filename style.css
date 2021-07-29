@@ -26,12 +26,51 @@ button:hover{
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.container{
+#modal{
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#inner_modal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#inner_modal textarea{
+  width: 276px;
+  height: 276px;
+  padding: 25px;
+  outline: none;
+  resize: none;
+  font-size: 1.5rem;
+  font-family: inherit;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+}
+
+#inner_modal i{
+  font-size: 1.4rem;
+  color: gray;
+  cursor: pointer;
+  margin-top: -285px;
+  margin-left: -35px;
+  transition: 1s ease-in-out;
+}
+
+#inner_modal i:hover{
+  color: lightgray;
+}
+
+#main{
   width: 1280px;
   margin: auto;
 }
 
-.nav{
+#header{
   color: white;
   padding: 0 20px;
   min-height: 70px;
@@ -42,55 +81,22 @@ button:hover{
   align-items: center;
 }
 
-.createBox{
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+.fas{
+  color: #c2ff3d;
 }
 
-.innerCreateBox{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.innerCreateBox textarea{
-  width: 276px;
-  height: 276px;
-  padding: 25px;
-  outline: none;
-  resize: none;
-  font-family: inherit;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
-}
-
-.innerCreateBox i{
-  font-size: 1.4rem;
-  color: gray;
-  cursor: pointer;
-  margin-top: -285px;
-  margin-left: -35px;
-  transition: 1s ease-in-out;
-}
-
-.innerCreateBox i:hover{
-  color: lightgray;
-}
-
-.notes{
+#all_notes{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 10px;
+  padding-top: 10px;
 }
 
 .note{
   width:300px;
-  height:305px;
+  height: 300px;
   transition: 2s;
+  cursor: pointer;
   overflow-wrap: break-word;
   box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.75);
 }
@@ -112,22 +118,15 @@ button:hover{
 }
 
 @media(max-width:1280px){
-  .container{
-    width: 95%;
+  #main{
+    width: 100%;
   }
 }
 
 @media(max-width:768px){
-  .nav{
+  #header{
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
-}
-
-@media(max-width:480px){
-  .innerCreateBox{
-    width: 95%;
-    margin: auto;
   }
 }
